@@ -27,7 +27,7 @@ class App extends React.Component {
 
   shuffleForward() {
     const { cardData } = this.state;
-    const newCardData = [cardData[0], ...cardData.slice(1)];
+    const newCardData = [...cardData.slice(1), cardData[0]];
     this.setState({cardData: newCardData});
   }
 

@@ -9,6 +9,8 @@ class Card extends React.Component {
 
     this.flipCard = this.flipCard.bind(this);
     this.cardClass = this.cardClass.bind(this);
+
+    console.log(this.cardClass());
   }
 
 
@@ -19,7 +21,7 @@ class Card extends React.Component {
   }
 
   cardClass() {
-     this.state.flipped ? 'Card -back' : 'Card -front';
+     return this.state.flipped ? 'Card -back' : 'Card -front';
   }
 
   componentDidUpdate(prevProps, prevState) {
