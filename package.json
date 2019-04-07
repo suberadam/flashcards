@@ -1,0 +1,29 @@
+{
+  "name": "flashback",
+  "version": "1.0.0",
+  "description": "Simple flashcard app",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suberadam/flashcards.git"
+  },
+  "keywords": [
+    "flashcard",
+    "app"
+  ],
+  "author": "Zuber Adam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suberadam/flashcards/issues"
+  },
+  "homepage": "https://github.com/suberadam/flashcards#readme",
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^10.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
