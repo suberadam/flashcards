@@ -1,7 +1,7 @@
-import Card from './Button';
-import importedFlashCardDataFile from '../flashCardData.js'
-
-const cardData = importedFlashCardDataFile;
+var Card = require('./card.js');
+var ReactDOM = require('react-dom');
+var React = require('react');
+const cardData = require('./flashCardData.js');
 
 class App extends React.Component {
   constructor() {
@@ -9,6 +9,9 @@ class App extends React.Component {
     this.state = {
       cardData: []
     };
+
+    this.shuffleBackward = this.shuffleBackward.bind(this);
+    this.shuffleForward = this.shuffleForward.bind(this);
 
   }
 

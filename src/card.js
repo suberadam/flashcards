@@ -1,9 +1,25 @@
+var React = require('react');
+
 class Card extends React.Component {
   constructor() {
     super();
     this.state = {
       flipped: false
     };
+
+    this.flipCard = this.flipCard.bind(this);
+    this.cardClass = this.cardClass.bind(this);
+  }
+
+
+  flipCard() {
+    if (this.props.index === 0) {
+      this.setState({flipped: !this.state.flipped});
+    }
+  }
+
+  cardClass() {
+     this.state.flipped ? 'Card -back' : 'Card -front';
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -13,15 +29,8 @@ class Card extends React.Component {
 
   }
 
-  flipCard = () => {
-    if (this.props.index === 0) {
-      this.setState({flipped: !this.state.flipped});
-    }
-  }
-
-  cardClass = () => this.state.flipped ? 'Card -back' : 'Card -front';
-  
   render() {
+    console.log(this.cardClass());
     return (
       <div className={this.cardClass()} onClick={() => this.flipCard()}>
         { !this.state.flipped ?
@@ -51,3 +60,5 @@ class Card extends React.Component {
     );
   }
 }
+
+module.exports = Card;
